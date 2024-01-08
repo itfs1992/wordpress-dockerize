@@ -51,8 +51,8 @@ location ~ \.php$ {
         set $auth_basic off;
     }
     
-    auth_basic $auth_basic;
-    auth_basic_user_file /var/www/html/.htpasswd;
+    #auth_basic $auth_basic;
+    #auth_basic_user_file /var/www/html/.htpasswd;
     fastcgi_split_path_info ^(.+\.php)(/.+)$;
     fastcgi_pass unix:/var/run/php-fpm.sock;
 #   fastcgi_pass 127.0.0.1:9000;
